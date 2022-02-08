@@ -1,6 +1,6 @@
 import React from 'react';
-import { useState } from 'react';
-import EntryForm from '../../Components/EntryForm/EntryForm';
+// import { useState } from 'react';
+// import EntryForm from '../../Components/EntryForm/EntryForm';
 import { useEntries } from '../../Context/EntryContext';
 
 export default function EntryList() {
@@ -17,7 +17,12 @@ export default function EntryList() {
     <div>
       <h1> Guest Book</h1>
       {entries.map(({ entry, user }) => {
-        return <div key={`${entry}`}></div>;
+        return (
+          <div key={`${entry}`}>
+            {entry}
+            {user}
+          </div>
+        );
       })}
     </div>
   );
