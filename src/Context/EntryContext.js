@@ -3,8 +3,8 @@ import { useContext, createContext, useState } from 'react';
 const EntryContext = createContext();
 
 const EntryProvider = ({ children }) => {
-  const [entry, setEntry] = useState([]);
-  const contextValue = { entry, setEntry };
+  const [entries, setEntries] = useState([]);
+  const contextValue = { entries, setEntries };
   return <EntryContext.Provider value={contextValue}>{children}</EntryContext.Provider>;
 };
 
