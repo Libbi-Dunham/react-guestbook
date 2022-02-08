@@ -13,7 +13,6 @@ export default function EntryForm({ entry, setEntry, handleSubmit }) {
             placeholder="entry"
             value={entry}
             onChange={(e) => {
-              console.log(setEntry);
               setEntry(e.target.value);
             }}
           />

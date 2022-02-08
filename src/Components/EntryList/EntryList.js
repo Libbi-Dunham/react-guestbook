@@ -7,13 +7,12 @@ export default function EntryList() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setEntry();
   };
 
   return (
     <div>
       <h1> Add a Entry!</h1>
-      <EntryForm entry={entry} handleSubmit={handleSubmit} />
+      <EntryForm entry={entry} setEntry={setEntry} handleSubmit={handleSubmit} />
     </div>
   );
 }
