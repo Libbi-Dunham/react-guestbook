@@ -1,13 +1,15 @@
 import React from 'react';
 import { useState } from 'react';
+import { useEntries } from '../../Context/EntryContext';
 
 export default function EntryForm() {
-  const [user, setUser] = useState('');
-  const [entry, setEntry] = useState('');
+  const [userText, setUserText] = useState('');
+  const [entryText, setEntryText] = useState('');
+  const { entries, setEntries } = useEntries();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setUser(user);
+    setUserText(userText);
   };
 
   return (
@@ -20,9 +22,9 @@ export default function EntryForm() {
             className="control"
             type="text"
             placeholder="name"
-            value={user}
+            value={userText}
             onChange={(e) => {
-              setUser(e.target.value);
+              setUserText(e.target.value);
             }}
           />
         </div>
@@ -31,9 +33,9 @@ export default function EntryForm() {
           className="user"
           type="text"
           placeholder="entry"
-          value={entry}
+          value={entryText}
           onChange={(e) => {
-            setEntry(e.target.value);
+            setEntryText(e.target.value);
           }}
         />
         <div>
