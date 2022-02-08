@@ -1,3 +1,15 @@
+body {
+  background-color: #f2dda4;
+  font-family: 'RursusCompactMonoMedium';
+  font-weight: normal;
+  font-style: normal;
+}
+
+.button {
+  font-family: 'RursusCompactMonoMedium';
+  font-weight: normal;
+  font-style: normal;
+}
 .App {
   text-align: center;
 }
