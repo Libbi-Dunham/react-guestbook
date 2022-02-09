@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from './Views/Home/Home';
+import CustomHook from './Components/CustomHook/CustomHook';
 import './App.css';
 
 function App() {
@@ -12,6 +13,9 @@ function App() {
           </Route>
         </Switch>
       </BrowserRouter>
+      <div className="navbar">
+        <CustomHook />
+      </div>
     </div>
   );
 }
