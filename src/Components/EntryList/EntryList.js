@@ -12,10 +12,9 @@ export default function EntryList() {
   // const handleSubmit = async (e) => {
   //   e.preventDefault();
   // };
-
   return (
     <div>
-      <h1> Guest Book</h1>
+      <h1>Guest Book</h1>
       {entries.map(({ entry, user }) => {
         return (
           <div key={`${entry}`}>

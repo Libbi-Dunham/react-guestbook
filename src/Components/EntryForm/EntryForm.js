@@ -14,26 +14,31 @@ export default function EntryForm() {
     setUser(userText);
     setEntries([...entries, { entry: entryText, user }]);
   };
-
+  const displayEntry = user ? `Welcome ${user}` : 'Write A Entry!';
   return (
     <div>
-      <form>
-        <h3>Enter A Entry</h3>
+      <form onSubmit={handleSubmit}>
+        <h3>{displayEntry}</h3>
         <div className="form-control">
           <label>Name: </label>
-          <input
-            className="control"
-            type="text"
-            placeholder="name"
-            value={userText}
-            onChange={(e) => {
-              setUserText(e.target.value);
-            }}
-          />
+          {!user ? (
+            <input
+              className="name"
+              type="text"
+              placeholder="name"
+              value={userText}
+              onChange={(e) => {
+                setUserText(e.target.value);
+              }}
+            />
+          ) : (
+            <button onClick={() => setUser('')}>{`${user}?`}</button>
+          )}
         </div>
+        <br></br>
         <label>Entry: </label>
         <input
-          className="user"
+          className="entry"
           type="text"
           placeholder="entry"
           value={entryText}
@@ -41,10 +46,10 @@ export default function EntryForm() {
             setEntryText(e.target.value);
           }}
         />
+        <br></br>
+        <br></br>
         <div>
-          <button className="button" onClick={handleSubmit}>
-            Save
-          </button>
+          <input className="button" type="submit" value="Save" />
         </div>
       </form>
     </div>
