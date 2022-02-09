@@ -12,13 +12,13 @@ export default function EntryForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setUser(userText);
-    setEntries([...entries, { entry: entryText, user }]);
+    setEntries([...entries, { entry: entryText, user: userText }]);
   };
   const displayEntry = user ? `Welcome ${user}` : 'Write A Entry!';
   return (
     <div>
+      <h3>{displayEntry}</h3>
       <form onSubmit={handleSubmit}>
-        <h3>{displayEntry}</h3>
         <div className="form-control">
           <label>Name: </label>
           {!user ? (
