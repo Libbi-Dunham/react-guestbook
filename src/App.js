@@ -1,7 +1,9 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from './Views/Home/Home';
 import CustomHook from './Components/CustomHook/CustomHook';
+import Footer from './Views/Footer/Footer';
 import './App.css';
+// import EntryList from './Components/EntryList/EntryList';
 
 function App() {
   return (
@@ -14,8 +16,10 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
+          {/* <Route path="/entries" component={EntryList} /> */}
         </Switch>
       </BrowserRouter>
+      <Footer />
     </div>
   );
 }

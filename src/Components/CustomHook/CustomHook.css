@@ -24,6 +24,7 @@ body.dark-mode-toggle > button {
   top: 0;
   width: 100%;
   display: flex;
+  background-color: #9cccc5;
 }
 .content {
   padding: 20px;
