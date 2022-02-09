@@ -18,7 +18,7 @@ test('renders the actions', async () => {
   userEvent.type(entryInput, 'hello');
   userEvent.type(nameInput, 'libbi');
   userEvent.click(button);
-  const entry = await screen.findByText(/hellolibbi/i);
+  const entry = await screen.findByText(/hello libbi/i);
   expect(entry).toBeInTheDocument();
 
   const displayMessage = screen.getByText(/Welcome libbi/i);

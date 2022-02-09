@@ -8,12 +8,7 @@ export default function EntryList() {
     <div>
       <h1>Guest Book</h1>
       {entries.map(({ entry, user }) => {
-        return (
-          <div key={`${entry}`}>
-            {entry}
-            {user}
-          </div>
-        );
+        return <div key={`${entry}`}>{`${entry} ${user}`}</div>;
       })}
     </div>
   );
