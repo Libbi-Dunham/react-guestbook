@@ -37,7 +37,7 @@ export default function EntryForm() {
         </div>
         <br></br>
         <label>Entry: </label>
-        <input
+        <textarea
           className="entry"
           type="text"
           placeholder="entry"

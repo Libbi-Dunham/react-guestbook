@@ -6,6 +6,9 @@ import './App.css';
 function App() {
   return (
     <div className="App">
+      <div className="navbar">
+        <CustomHook />
+      </div>
       <BrowserRouter>
         <Switch>
           <Route exact path="/">
@@ -13,9 +16,6 @@ function App() {
           </Route>
         </Switch>
       </BrowserRouter>
-      <div className="navbar">
-        <CustomHook />
-      </div>
     </div>
   );
 }
