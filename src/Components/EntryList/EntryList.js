@@ -7,8 +7,9 @@ export default function EntryList() {
 
   return (
     <div className="entries">
+      <h3 className="Entries"> Your Entries!</h3>
       {entries.map(({ entry, user }) => {
-        return <div className="div" key={`${entry}`}>{`${entry} ${user}`}</div>;
+        return <div className="div" key={`${entry}`}>{`${entry}- ${user}`}</div>;
       })}
     </div>
   );

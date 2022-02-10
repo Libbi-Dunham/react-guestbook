@@ -2,17 +2,20 @@ import React from 'react';
 import { useState } from 'react';
 import { useEntries } from '../../Context/EntryContext';
 import { useUser } from '../../Context/UserContext';
+import { useHistory } from 'react-router-dom';
 
 export default function EntryForm() {
   const [userText, setUserText] = useState('');
   const [entryText, setEntryText] = useState('');
   const { entries, setEntries } = useEntries();
   const { user, setUser } = useUser();
+  const history = useHistory();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setUser(userText);
     setEntries([...entries, { entry: entryText, user: userText }]);
+    history.push('/entries');
   };
   return (
     <div>
