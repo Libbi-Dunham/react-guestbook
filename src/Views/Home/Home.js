@@ -1,11 +1,13 @@
 import EntryForm from '../../Components/EntryForm/EntryForm';
 import EntryList from '../../Components/EntryList/EntryList';
+import Header from '../Header/Header';
 
 const Home = () => {
   return (
     <>
-      <EntryList />
+      <Header />
       <EntryForm />
+      <EntryList />
     </>
   );
 };

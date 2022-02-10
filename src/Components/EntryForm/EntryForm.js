@@ -14,10 +14,8 @@ export default function EntryForm() {
     setUser(userText);
     setEntries([...entries, { entry: entryText, user: userText }]);
   };
-  const displayEntry = user ? `Welcome ${user}` : 'Write A Entry!';
   return (
     <div>
-      <h3>{displayEntry}</h3>
       <form onSubmit={handleSubmit}>
         <div className="form-control">
           <label>Name: </label>

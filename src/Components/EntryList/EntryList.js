@@ -1,14 +1,14 @@
 import React from 'react';
+import './EntryList.css';
 import { useEntries } from '../../Context/EntryContext';
 
 export default function EntryList() {
   const { entries } = useEntries();
 
   return (
-    <div>
-      <h1>Guest Book</h1>
+    <div className="entries">
       {entries.map(({ entry, user }) => {
-        return <div key={`${entry}`}>{`${entry} ${user}`}</div>;
+        return <div className="div" key={`${entry}`}>{`${entry} ${user}`}</div>;
       })}
     </div>
   );
