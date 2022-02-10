@@ -20,6 +20,9 @@ body.navbar {
 body.dark-mode-toggle > button {
   color: #999;
 }
+.dmcheck {
+  visibility: hidden;
+}
 .navbar {
   top: 0;
   width: 100%;
