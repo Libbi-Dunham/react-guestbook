@@ -3,14 +3,17 @@ import userEvent from '@testing-library/user-event';
 import App from './App';
 import { EntryProvider } from './Context/EntryContext';
 import { UserProvider } from './Context/UserContext';
+import { MemoryRouter } from 'react-router-dom/cjs/react-router-dom.min';
 
-test('renders the actions', async () => {
+test('renders the actions', () => {
   render(
-    <EntryProvider>
-      <UserProvider>
-        <App />
-      </UserProvider>
-    </EntryProvider>
+    <MemoryRouter>
+      <EntryProvider>
+        <UserProvider>
+          <App />
+        </UserProvider>
+      </EntryProvider>
+    </MemoryRouter>
   );
   const button = screen.getByRole('button', { name: /Save/i });
   const entryInput = screen.getByPlaceholderText('entry');
@@ -18,9 +21,10 @@ test('renders the actions', async () => {
   userEvent.type(entryInput, 'hello');
   userEvent.type(nameInput, 'libbi');
   userEvent.click(button);
-  const entry = await screen.findByText(/hello libbi/i);
+  const entry = screen.getByText(/hello libbi/i);
   expect(entry).toBeInTheDocument();
-
+  const button3 = screen.getByRole('button', { name: /Back/i });
+  userEvent.click(button3);
   const displayMessage = screen.getByText(/Welcome libbi/i);
   expect(displayMessage).toBeInTheDocument();
 

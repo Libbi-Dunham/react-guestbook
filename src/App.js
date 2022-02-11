@@ -4,10 +4,8 @@ import CustomHook from './Components/CustomHook/CustomHook';
 import Footer from './Views/Footer/Footer';
 import './App.css';
 import EntryList from './Components/EntryList/EntryList';
-// import { useEntries } from './Context/EntryContext';
 
 function App() {
-  // const { entries } = useEntries();
   return (
     <div className="App">
       <div className="navbar">
