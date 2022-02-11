@@ -1,17 +1,18 @@
-body {
-  background-color: #f2dda4;
-  font-family: 'RursusCompactMonoMedium';
-  font-weight: normal;
-  font-style: normal;
+.entries {
+  padding: 50px;
+  margin-left: 40px;
 }
 
-textarea {
+.div {
+  display: flex;
+  flex-direction: row;
+  border: 3px solid #9cccc5;
+  background-color: white;
   border-radius: 10px;
-  border: 2px solid black;
-}
-
-.Entries {
-  margin-right: 35px;
+  margin: auto;
+  padding: 20px;
+  width: 100px;
+  height: 30px;
 }
 
 .button {
@@ -28,7 +29,7 @@ textarea {
   -webkit-transition: box-shadow 0.25s;
   transition: box-shadow 0.25s;
   color: white;
-  margin-left: 90px;
+  margin-right: 45px;
 }
 
 .button .text {
@@ -48,7 +49,7 @@ textarea {
   bottom: 0;
   right: 0;
   z-index: -1;
-  background: #0e0e10;
+  background-image: linear-gradient(-45deg, #f2dda4, #9cccc5);
 }
 
 .button:hover {
@@ -58,15 +59,4 @@ textarea {
 
 .button:hover .text {
   background-image: linear-gradient(-45deg, #f2dda4, #9cccc5);
-}
-h3,
-h1 {
-  margin-left: 50px;
-}
-input {
-  border-radius: 10px;
-  height: 35px;
-}
-.App {
-  text-align: center;
 }
