@@ -4,6 +4,7 @@ import CustomHook from './Components/CustomHook/CustomHook';
 import Footer from './Views/Footer/Footer';
 import './App.css';
 import EntryList from './Components/EntryList/EntryList';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -13,9 +14,9 @@ function App() {
       </div>
       <BrowserRouter>
         <Switch>
-          <Route exact path="/">
+          <PrivateRoute exact path="/">
             <Home />
-          </Route>
+          </PrivateRoute>
           <Route exact path="/entries">
             <EntryList />
           </Route>
