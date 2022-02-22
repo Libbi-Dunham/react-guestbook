@@ -5,6 +5,7 @@ import Footer from './Views/Footer/Footer';
 import './App.css';
 import EntryList from './Components/EntryList/EntryList';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import Auth from './Views/Auth/Auth';
 
 function App() {
   return (
@@ -14,6 +15,9 @@ function App() {
       </div>
       <BrowserRouter>
         <Switch>
+          <Route path="/login">
+            <Auth />
+          </Route>
           <PrivateRoute exact path="/">
             <Home />
           </PrivateRoute>
