@@ -18,20 +18,22 @@ export default function Auth() {
   };
   return (
     <form>
-      <h2>Auth</h2>
+      <h1>Guest Book</h1>
       <input
         type="email"
         value={email}
         onChange={(event) => setEmail(event.target.value)}
         placeholder="email"
       />
-      <input
-        type="password"
-        value={password}
-        onChange={(event) => setPassword(event.target.value)}
-        placeholder="password"
-      />
-      <button type="button" onClick={handleLogin}>
+      <div>
+        <input
+          type="password"
+          value={password}
+          onChange={(event) => setPassword(event.target.value)}
+          placeholder="password"
+        />
+      </div>
+      <button className="button" type="button" onClick={handleLogin}>
         Enter
       </button>
     </form>
