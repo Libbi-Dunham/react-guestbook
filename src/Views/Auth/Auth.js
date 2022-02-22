@@ -4,6 +4,7 @@ import { useUser } from '../../Context/UserContext';
 import { useState } from 'react';
 
 export default function Auth() {
+  // const { user } = useUser();
   const { setUser } = useUser();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -11,10 +12,12 @@ export default function Auth() {
   const history = useHistory();
 
   const handleLogin = () => {
-    setUser('example');
+    if (email === process.env.REACT_APP_AUTH_USERNAME) setUser({ email });
+    if (password === process.env.REACT_APP_AUTH_USERNAME) setPassword({ password });
+
+    setUser(email);
     const { from } = location.state || { from: { pathname: '/' } };
     history.push(from.pathname);
-    // if (email === process.env.REACT_APP_AUTH_USERNAME) setUser {{ email }}
   };
   return (
     <form>
