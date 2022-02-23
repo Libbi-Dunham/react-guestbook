@@ -19,11 +19,6 @@ export default function EntryList() {
       {entries.map(({ entry, user }) => {
         return <div className="div" key={`${entry}`}>{`${entry} ${user}`}</div>;
       })}
-      {/* <div>
-        <button className="button" onClick={handleSubmit}>
-          Back
-        </button>
-      </div> */}
       <div>
         <button className="button" onClick={handleSubmit}>
           Logout

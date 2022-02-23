@@ -6,7 +6,6 @@ export default function PrivateRoute({ children, ...routeProps }) {
 
   return (
     <>
-      {/* <p>hello</p> */}
       <Route
         {...routeProps}
         render={({ location }) =>
