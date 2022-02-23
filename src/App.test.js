@@ -5,7 +5,7 @@ import { EntryProvider } from './Context/EntryContext';
 import { UserProvider } from './Context/UserContext';
 import { MemoryRouter } from 'react-router-dom/cjs/react-router-dom.min';
 
-test('renders the actions', () => {
+test.skip('renders the actions', () => {
   render(
     <MemoryRouter>
       <EntryProvider>
