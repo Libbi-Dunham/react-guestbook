@@ -21,20 +21,7 @@ export default function EntryForm() {
     <div>
       <form onSubmit={handleSubmit}>
         <div className="form-control">
-          <label>Name: </label>
-          {!user ? (
-            <input
-              className="name"
-              type="text"
-              placeholder="name"
-              value={userText}
-              onChange={(e) => {
-                setUserText(e.target.value);
-              }}
-            />
-          ) : (
-            <button onClick={() => setUser('')}>{`${user}?`}</button>
-          )}
+          <button onClick={() => setUser('')}>Logout</button>
         </div>
         <br></br>
         <label>Entry: </label>

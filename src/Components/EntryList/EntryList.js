@@ -21,7 +21,7 @@ export default function EntryList() {
       })}
       <div>
         <button className="button" onClick={handleSubmit}>
-          Logout
+          Back
         </button>
       </div>
     </div>
